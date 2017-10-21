@@ -4,6 +4,15 @@
 
 <style>
 body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4f545c;
+  color: white;
+  text-align: center;
+  font-size: 3em;
   margin: 0;
   padding: 0;
   display: flex;
@@ -12,14 +21,14 @@ body {
 }
 
 #code {
+  margin-top: 10px;
   font-family: 'Comic Sans MS', monospace;
 }
 </style>
 
 <div>
   <div id='time'></div>
-  <br />
-  <div id='code'></div>
+  <div id='code'>loading, hold on</div>
 </div>
 
 <script src="https://unpkg.com/otplib@^6.0.0/otplib-browser.js"></script>
