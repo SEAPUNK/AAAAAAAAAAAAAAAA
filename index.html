@@ -7,7 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-  flex: 1;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -29,7 +29,7 @@ var step = 30;
 var code = document.getElementById('code');
 var time = document.getElementById('time');
 var secret = 'AAAAAAAAAAAAAAAA';
-window.setTimeout(function () {
+window.setInterval(function () {
   var token = otplib.authenticator.generate(secret);
   var epoch = Math.floor(new Date().getTime() / 1000);
   var count = epoch % 30;
