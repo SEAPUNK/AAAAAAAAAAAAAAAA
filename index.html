@@ -1,0 +1,39 @@
+<!doctype html>
+
+<meta lang='en-US' />
+<title>AAAAAAAAAAAAAAAA</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+#code {
+  font-family: 'Comic Sans MS', monospace;
+}
+</style>
+
+<div>
+  <div id='time' />
+  <br />
+  <div id='code' />
+</div>
+
+<script src="https://unpkg.com/otplib@^6.0.0/otplib-browser.js"></script>
+<script>
+var step = 30;
+var code = document.getElementById('code');
+var time = document.getElementById('time');
+var secret = 'AAAAAAAAAAAAAAAA';
+window.setTimeout(function () {
+  var token = otplib.authenticator.generate(secret);
+  var epoch = Math.floor(new Date().getTime() / 1000);
+  var count = epoch % 30;
+  code.textContent = token;
+  time.textContent = String(step - count) + 's';
+}, 500);
+</script>
