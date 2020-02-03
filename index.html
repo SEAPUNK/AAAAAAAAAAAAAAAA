@@ -41,7 +41,9 @@ window.setInterval(function () {
   var token = otplib.authenticator.generate(secret);
   var epoch = Math.floor(new Date().getTime() / 1000);
   var count = epoch % 30;
-  code.textContent = token;
+  if (code.textContent !== token) {
+    code.textContent = token;
+  }
   time.textContent = String(step - count) + 's';
 }, 500);
 </script>
