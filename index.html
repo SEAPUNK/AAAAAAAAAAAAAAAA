@@ -24,11 +24,38 @@ body {
   margin-top: 10px;
   font-family: 'Comic Sans MS', monospace;
 }
+
+#powermode {
+  font-family: 'Comic Sans MS', monospace;
+  font-size: 28px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
 </style>
 
 <div>
   <div id='time'></div>
   <div id='code'>loading, hold on</div>
+  <br />
+  <hr />
+  <br />
+  <div>
+    <div id="powermode">
+      <input type="range" id="aaaaa1" name="aaaaa1" min="0" max="11">
+      <label for="aaaaa1">AAAAA</label>
+    </div>
+    <div>
+      <input type="checkbox" id="aaaaa2" name="aaaaa2">
+      <label for="aaaaa2">AAAAA</label>
+    </div>
+    <div>
+      <input type="color" id="aaaaa3" name="aaaaa3" value="#AC83C3">
+      <label for="aaaaa3">AAAAA</label>
+    </div>
+  </div>
 </div>
 
 <script src="https://unpkg.com/otplib@^6.0.0/otplib-browser.js"></script>
